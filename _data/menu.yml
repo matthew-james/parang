@@ -1,2 +1,5 @@
 Getting Started:
   Introduction: '/'
+Layouts:
+  Default: '/layouts/default/'
+  Full Width: '/layouts/full-width/'
