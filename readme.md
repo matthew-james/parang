@@ -10,6 +10,10 @@ This is a Jekyll theme for project documentation on github pages.  It was origin
 - 100% compatible with the github pages build environment.
 - No javascript.
 
+## Demo
+
+You can view a demo hosted on github pages [here](http://mattallan.org/parang/).
+
 # Local Installation
 
 ## Jekyll Setup
