@@ -3,7 +3,11 @@
     <ul>
         {% for link in section[1] %}
             <li>
-                <a href="{{ link[1] | prepend: site.baseurl }}">{{ link[0] }}</a>
+	            {% if jekyll.environment == 'production' %}
+				  	<a href="{{ link[1] | prepend: site.github.url }}">{{ link[0] }}</a>
+				{% else %}
+				  	<a href="{{ link[1] | prepend: site.baseurl }}">{{ link[0] }}</a>
+				{% endif %}
             </li>
         {% endfor %}
     </ul>
