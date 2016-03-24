@@ -12,7 +12,7 @@ This is a Jekyll theme for project documentation on github pages.  It was origin
 
 ## Demo
 
-You can view a demo hosted on github pages [here](http://mattallan.org/parang/).
+You can view a demo hosted on github pages [here](http://yuloh.github.io/parang/).
 
 # Local Installation
 
