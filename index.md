@@ -20,17 +20,17 @@ Documentation is written in standard github flavoured markdown.  You can view a 
 
 Code blocks are written [just like on github](https://help.github.com/articles/creating-and-highlighting-code-blocks/).
 
-Code highlighting uses the rouge syntax highlighter, which is the only syntax highlighter supported by github pages and the default for Jekyll 3.  Since code is highlighted when your site is built by jekyll, javascript isn't required to render it.
+Code highlighting uses the rouge syntax highlighter, which is the only syntax highlighter supported by github pages and the default for Jekyll 3.  Since code is highlighted when your site is built by jekyll, javascript isn't required to render it.  You can change the color scheme with one line in `_config.yml`.
 
 ```php
 <?php
 
-$deref  = new Machete\Validation\Dereferencer();
+$deref  = new Yuloh\JsonGuard\Dereferencer();
 $schema = $deref->dereference('http://json-schema.org/draft-04/schema#');
 
-$data = json_decode('{ "id": "machete.dev/schema#" }');
+$data = json_decode('{ "id": "yuloh.dev/schema#" }');
 
-$validator = new Validator($data, $schema);
+$validator = new Yuloh\JsonGuard\Validator($data, $schema);
 
 if ($validator->fails()) {
     $errors = $validator->errors();
@@ -41,13 +41,8 @@ if ($validator->fails()) {
 [
   {
     "code": 50,
-    "message": "'machete.dev\/schema#' is not a valid uri.",
+    "message": "'yuloh.dev\/schema#' is not a valid uri.",
     "path": "\/id"
-  },
-  {
-    "code": 25,
-    "message": "Value '2192191' is not a string.",
-    "path": "\/name"
   }
 ]
 ```
