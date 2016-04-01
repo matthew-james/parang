@@ -6,8 +6,6 @@ layout: default
 
 This is a Jekyll theme for project documentation on github pages.  It uses the [skeleton](getskeleton.com) css framework for layout and default styling.
 
-# Usage
-
 ## Repository Meta
 
 Parang automatically pulls [repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages/) to populate as much information as possible automatically.  Locally a [jekyll plugin](https://github.com/jekyll/github-metadata) is used for a seamless editing experience.
