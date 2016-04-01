@@ -9,4 +9,4 @@ repository: yuloh/parang
 # The color scheme to use for syntax highlighting.
 # The available color schemes are listed in
 # the _includes/css/syntax directory.
-syntax_theme: monokai
+syntax_theme: peacock

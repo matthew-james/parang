@@ -24,25 +24,56 @@ Code highlighting uses the rouge syntax highlighter, which is the only syntax hi
 
 ```php
 <?php
+namespace Illuminate\Container;
 
-$deref  = new Yuloh\JsonGuard\Dereferencer();
-$schema = $deref->dereference('http://json-schema.org/draft-04/schema#');
+use Closure;
+use ArrayAccess;
 
-$data = json_decode('{ "id": "yuloh.dev/schema#" }');
+class Container implements ArrayAccess
+{
+    /**
+     * An array of the types that have been resolved.
+     *
+     * @var array
+     */
+    protected $resolved = array();
 
-$validator = new Yuloh\JsonGuard\Validator($data, $schema);
+    /**
+     * Determine if a given type is shared.
+     *
+     * @param  string  $abstract
+     * @return bool
+     */
+    public function isShared($abstract)
+    {
+        if (isset($this->bindings[$abstract]['shared']))
+        {
+            $shared = $this->bindings[$abstract]['shared'];
+        }
+        else
+        {
+            $shared = false;
+        }
 
-if ($validator->fails()) {
-    $errors = $validator->errors();
+        return isset($this->instances[$abstract]) || $shared === true;
+    }
+
 }
 ```
 
 ```json
-[
-  {
-    "code": 50,
-    "message": "'yuloh.dev\/schema#' is not a valid uri.",
-    "path": "\/id"
-  }
-]
+{
+  "id": 51866520,
+  "name": "parang",
+  "full_name": "yuloh/parang",
+  "private": false,
+  "subscription_url": "https://api.github.com/repos/yuloh/parang/subscription",
+```
+
+```bash
+curl -sL https://github.com/matthew-james/parang/archive/master.tar.gz | tar xz
+cp -r parang-master/* ./
+rm -fr parang-master
+git add .
+git commit -m 'init parang theme'
 ```
