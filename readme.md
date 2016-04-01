@@ -5,6 +5,7 @@ This is a Jekyll theme for project documentation on github pages.
 ## Notable Features
 
 - Uses [repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages/) to pull in your project information automatically.
+- Automatic 'edit this page' links.
 - Multiple syntax highlighting themes to choose from.
 - Fully responsive design.
 - 100% compatible with the github pages build environment.
